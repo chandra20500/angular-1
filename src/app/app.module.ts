@@ -38,17 +38,13 @@ import { MatIconModule } from '@angular/material/icon'
     MatIconModule,
     RouterModule.forRoot([
       {
-        path: 'login',
+        path: '',
         component: LoginComponent
       },
       {
         path: 'admin',
         component: AdminComponent,
         canActivate: [AuthGuard]
-      },      
-      {
-        path: '',
-        component: HelloComponent
       }
     ]),
     BrowserAnimationsModule,
