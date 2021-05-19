@@ -1,0 +1,25 @@
+@import url('http://fonts.cdnfonts.com/css/jersey-m54');
+
+.main-heading {
+    text-align:center;
+    color: white;
+    font-family: 'Jersey M54', sans-serif;
+    font-size: 2em;
+}
+
+.content {
+    position: relative;
+}
+
+.cntainer {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    align-items: center;
+}
+
+.contest-card {
+    background-color: white;
+    font-family: 'Jersey M54', sans-serif;
+    color: black;
+}

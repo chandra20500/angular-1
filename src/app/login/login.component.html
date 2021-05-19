@@ -1,0 +1,41 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card>
+    <!-- main heading -->
+      <mat-card-header>
+        <mat-card-title>Log in</mat-card-title>
+      </mat-card-header>
+    <!-- login form -->
+      <form class="example-form" (submit)="login($event)" >
+        <mat-card-content>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <!-- email validation -->
+            <input matInput placeholder="pat@example.com" 
+              [formControl]="email" 
+              required type="text" 
+              id="username" 
+              placeholder="Username"
+            >
+            <!-- error message in case of wrong syntac -->
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <!--password verification -->
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" type="password" 
+              id="password"
+              placeholder="Password"
+              [formControl]="password"
+            >
+            <!--error message in case of small password -->
+            <mat-error *ngIf="password.errors?.minlength">{{getErrorMessage()}}</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block">Log in</button>
+      </form>
+    </mat-card>
+</div>

@@ -1,0 +1,88 @@
+<!-- top 5 player grid -->
+<div class="content">
+    <h3 class="main-heading">ESPN top 5 Players season 2021</h3>
+    <div fxLayout="row wrap" fxLayoutGap="8px 8px grid" class="cntainer">
+      <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let player of playerList">
+        <mat-card  class="contest-card" >
+          <img mat-card-image src={{player.image}} height="350px">
+          <mat-card-content>
+            <p>{{player.rank}}.  {{player.name}}</p>
+          </mat-card-content>
+          <table>
+              <tr>
+                  <td style="padding:0 10px 0 10px; text-align:center">
+                      Points
+                  </td>
+                  <td style="padding:0 10px 0 10px; text-align:center">
+                      Rebound
+                  </td>
+                  <td style="padding:0 10px 0 10px; text-align:center">
+                      Assist
+                  </td>
+              </tr>
+              <tr>
+                <td style="padding:0 10px 0 10px; text-align:center">
+                    {{player.ppg}}
+                </td>
+                <td style="padding:0 10px 0 10px; text-align:center">
+                    {{player.rpg}}
+                </td>
+                <td style="padding:0 10px 0 10px; text-align:center">
+                    {{player.apg}}
+                </td>
+            </tr>
+          </table>
+          <p>{{player.championship}} Time NBA Champion </p>
+          <p>{{player.fmvp}} Time NBA Final's MVP </p>
+          <p>{{player.mvp}} Time NBA League MVP </p>
+        </mat-card>
+      </div>
+    </div>
+</div>
+<!-- offensive player grid -->
+<div class="content">
+    <h3 class="main-heading">ESPN top 5 Offensive Players season 2021</h3>
+    <div fxLayout="row wrap" fxLayoutGap="8px 8px grid" class="cntainer">
+      <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let player of offList">
+        <mat-card  class="contest-card" >
+          <img mat-card-image src={{player.image}} height="350px">
+          <mat-card-content>
+            <p style="text-align:center">{{player.name}}</p>
+          </mat-card-content>
+            <p style="text-align:center">{{player.ppg}} Points Per Game</p>
+        </mat-card>
+      </div>
+    </div>
+</div>
+<!-- defensive player grid -->
+<div class="content">
+    <h3 class="main-heading">ESPN top 5 Defensive Players season 2021</h3>
+    <div fxLayout="row wrap" fxLayoutGap="8px 8px grid" class="cntainer">
+      <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let player of dplayerList">
+        <mat-card  class="contest-card" >
+          <img mat-card-image src={{player.image}} height="350px">
+          <mat-card-content>
+            <p>{{player.name}}</p>
+          </mat-card-content>
+          <table>
+              <tr>
+                  <td style="padding:0 10px 0 10px; text-align:center">
+                      Defensive player of year award
+                  </td>
+                  <td style="padding:0 10px 0 10px; text-align:center">
+                      Def. Rating
+                  </td>
+              </tr>
+              <tr>
+                <td style="padding:0 10px 0 10px; text-align:center">
+                    {{player.dpoy}}
+                </td>
+                <td style="padding:0 10px 0 10px; text-align:center">
+                    {{player.defRating}}
+                </td>
+            </tr>
+          </table>
+        </mat-card>
+      </div>
+    </div>
+</div>
